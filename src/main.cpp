@@ -26,7 +26,7 @@ competition Competition;
 
 
 int main() {
-  // Initializing Robot Configuration. DO NOT REMOVE! okay
+  // Initializing Robot Configuration. DO NOT REMOVE! 
   vexcodeInit();
   rectSize();
   rectangle();
