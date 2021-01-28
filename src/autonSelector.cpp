@@ -6,7 +6,7 @@ using namespace vex;
 extern brain Brain;
 brain::lcd screen;
 // int xpmin1 = 50, xpmax = 150;
-// // int xpmax1 = 150;
+// int xpmax1 = 150;
 // int ypmin1 = 50;
 // int ypmax1 = 150;
 // int xpmin2 = 200;
@@ -25,9 +25,9 @@ rectStruct blueSquare;
 rectStruct redSquare;
 
 void squares(){
-  Brain.Screen.setPenColor(blue);
+  Brain.Screen.setPenColor(black);
   screen.drawRectangle(blueSquare.startx, blueSquare.starty, blueSquare.lengthx, blueSquare.lengthy, blue);
-  Brain.Screen.setPenColor(red);
+  Brain.Screen.setPenColor(black);
   screen.drawRectangle(redSquare.startx, redSquare.starty, redSquare.lengthx, redSquare.lengthy, red);
 }
 

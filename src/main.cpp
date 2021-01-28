@@ -18,4 +18,5 @@ int main() {
   // Initializing Robot Configuration. DO NOT REMOVE!
   vexcodeInit();
   squares();
+  squareBuilder();
 }

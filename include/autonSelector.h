@@ -1,1 +1,2 @@
 void squares();
+void squareBuilder();
