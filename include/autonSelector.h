@@ -1,1 +1,2 @@
 void rectangle();
+void rectSize();
