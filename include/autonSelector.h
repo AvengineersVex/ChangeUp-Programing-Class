@@ -1,0 +1,2 @@
+void squares();
+void squareBuilder();
