@@ -18,14 +18,14 @@ rectStruct redsquare;
 rectStruct bluesquare;
 
 void rectSize(){
-  redsquare.startx = 120;
-  redsquare.lengthx = 200;
-  redsquare.starty = 116;
-  redsquare.lengthy = 156;
-  bluesquare.startx = 280;
-  bluesquare.lengthx = 360;
-  bluesquare.starty = 116;
-  bluesquare.lengthy = 156;
+  redsquare.startx = 100;
+  redsquare.lengthx = 100;
+  redsquare.starty = 50;
+  redsquare.lengthy = 100;
+  bluesquare.startx = 300;
+  bluesquare.lengthx = 100;
+  bluesquare.starty = 50;
+  bluesquare.lengthy = 100;
 }
 
 void rectangle(){
@@ -35,11 +35,15 @@ void rectangle(){
   
 }
 
-bool pressing(){
+void pressing(){
   int xPos = Brain.Screen.xPosition();
   int yPos = Brain.Screen.yPosition();
-  if (Brain.Screen.pressing() && xPos > redsquare.startx && xPos < redsquare.startx+redsquare.lengthx && yPos> redsquare.starty && yPos < redsquare.starty+redsquare.lengthy) {
-    return true;
-  } 
-    return false;
+  if (xPos > redsquare.startx && xPos < redsquare.startx+redsquare.lengthx && yPos > redsquare.starty && yPos < redsquare.starty+redsquare.lengthy) {
+    Brain.Screen.clearScreen();
+    Screen.drawRectangle(redsquare.startx, redsquare.lengthx, redsquare.starty, redsquare.lengthy, ClrGray);
+  }
+  if (xPos > bluesquare.startx && xPos < bluesquare.startx+bluesquare.lengthx && yPos > bluesquare.starty && yPos < bluesquare.starty+bluesquare.lengthy) {
+    Brain.Screen.clearScreen();
+    Screen.drawRectangle(bluesquare.startx, bluesquare.lengthx, bluesquare.starty, bluesquare.lengthy, ClrGray);
+  }
 }
