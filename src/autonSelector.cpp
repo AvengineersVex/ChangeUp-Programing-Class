@@ -32,11 +32,11 @@ void squares(){
 }
 
 void squareBuilder(){
-  blueSquare.startx = 50;
+  blueSquare.startx = 100;
   blueSquare.starty = 50;
   blueSquare.lengthx = 100;
   blueSquare.lengthy = 100;
-  redSquare.startx = 200;
+  redSquare.startx = 300;
   redSquare.starty = 50;
   redSquare.lengthx = 100;
   redSquare.lengthy = 100;
