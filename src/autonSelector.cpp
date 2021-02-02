@@ -41,11 +41,15 @@ void squareBuilder(){
   redSquare.lengthx = 100;
   redSquare.lengthy = 100;
 }
-bool squareCheck(){
+void squareCheck(){
   int xPos = Brain.Screen.xPosition();
   int yPos = Brain.Screen.yPosition();
-  if (Brain.Screen.pressing() && xPos>blueSquare.startx && xPos<blueSquare.startx+blueSquare.lengthx && yPos>blueSquare.starty && yPos<blueSquare.starty+blueSquare.lengthy) {
-    return true;
+  if (xPos>blueSquare.startx && xPos<blueSquare.startx+blueSquare.lengthx && yPos>blueSquare.starty && yPos<blueSquare.starty+blueSquare.lengthy) {
+    Brain.Screen.clearScreen();
+    screen.drawRectangle(blueSquare.startx, blueSquare.starty, blueSquare.lengthx, blueSquare.lengthy, ClrGray);
   }
-  return false;
+  if(xPos>redSquare.startx && xPos<redSquare.startx+redSquare.lengthx && yPos>redSquare.starty && yPos<redSquare.starty+redSquare.lengthy){
+    Brain.Screen.clearScreen();
+    screen.drawRectangle(redSquare.startx, redSquare.starty, redSquare.lengthx, redSquare.lengthy, red);
+  }
 }
