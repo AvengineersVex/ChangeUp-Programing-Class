@@ -51,19 +51,30 @@ void drawing(){
     redSquare.starty = 50;
     redSquare.lengthx = 100;
     redSquare.lengthy = 100;
-    
     }
-    
-    bool squareCheck(){
 
+    
+    
+    void squareCheck(void){
     int xPos = Brain.Screen.xPosition();
     int yPos = Brain.Screen.xPosition();
+
+    
   if(Brain.Screen.pressing() && xPos >= blueSquare.startx && xPos < blueSquare.lengthx && yPos > blueSquare.starty && yPos < redSquare.lengthy){
-    return true;
+    Brain.Screen.clearScreen();
+    Screen.drawRectangle(blueSquare.startx, blueSquare.starty, blueSquare.lengthx,blueSquare.lengthy, ClrGray);
   }
-      return false;
+
+  if(Brain.Screen.pressing() && xPos >= redSquare.startx && xPos < redSquare.lengthx && yPos > redSquare.starty && yPos < redSquare.lengthy){
+    Brain.Screen.clearScreen();
+    Screen.drawRectangle(redSquare.startx, redSquare.starty, redSquare.lengthx,redSquare.lengthy, ClrGray);
+  }
   
      }
+
+     void rectCall(){
+      Brain.Screen.pressed(squareCheck);
+    }
   
 
 

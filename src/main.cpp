@@ -1,11 +1,3 @@
-/*----------------------------------------------------------------------------*/
-/*                                                                            */
-/*    Module:       main.cpp                                                  */
-/*    Author:       C:\Users\druck                                            */
-/*    Created:      Mon Jan 11 2021                                           */
-/*    Description:  V5 project                                                */
-/*                                                                            */
-/*----------------------------------------------------------------------------*/
 
 /*Goal:
   -Make two buttons (Alliance Buttons)
@@ -28,6 +20,7 @@ using namespace vex;
 int main() {
   // Initializing Robot Configuration. DO NOT REMOVE!
   vexcodeInit();
-  drawing();
+  
   squareBuilder();
+
 }

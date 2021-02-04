@@ -1,4 +1,6 @@
 #include "vex.h"
+#include "autonSelector.h"
+
 
 using namespace vex;
 
@@ -12,4 +14,5 @@ brain Brain;
  */
 void vexcodeInit(void) {
   // Nothing to initialize
+  drawing();
 }
