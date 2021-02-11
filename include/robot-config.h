@@ -1,6 +1,7 @@
 using namespace vex;
 
-extern brain Brain;
+ extern brain Brain;
+ extern brain::lcd Screen;
 
 /**
  * Used to initialize code/tasks/devices added using tools in VEXcode Pro.

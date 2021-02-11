@@ -1,2 +1,2 @@
 void drawing();
-void squareBuilder();
+void squareParam();
