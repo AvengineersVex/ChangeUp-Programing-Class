@@ -24,10 +24,30 @@ using namespace vex;
 
 competition Competition;
 
+void preAuton(void){
+  vexcodeInit();
+  Brain.Screen.pressed(rectCheck);
+  startUp();
+}
+
+
+void autonomous(void){
+  
+}
+
+void usercontrol(void){
+  while (1) {
+
+    wait(20,msec);
+  }
+}
 
 int main() {
-  // Initializing Robot Configuration. DO NOT REMOVE! 
-  vexcodeInit();
-  rectSize();
-  rectangle();
-} 
+  Competition.autonomous(autonomous);
+  Competition.drivercontrol(usercontrol);
+  preAuton();
+
+  while (true) {
+    wait(100, msec);
+  }
+}

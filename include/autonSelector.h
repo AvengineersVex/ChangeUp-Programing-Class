@@ -1,2 +1,2 @@
-void rectangle();
-void rectSize();
+void startUp();
+void rectCheck();

@@ -1,4 +1,5 @@
 #include "vex.h"
+#include "autonSelector.h"
 
 using namespace vex;
 
@@ -11,4 +12,5 @@ using namespace vex;
  */
 void vexcodeInit(void) {
   // Nothing to initialize
+
 }

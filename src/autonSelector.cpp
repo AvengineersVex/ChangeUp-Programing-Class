@@ -28,22 +28,37 @@ void rectSize(){
   bluesquare.lengthy = 100;
 }
 
-void rectangle(){
-
+void rectBuilder(){
+  Brain.Screen.setPenColor(white);
   Screen.drawRectangle(redsquare.startx, redsquare.lengthx, redsquare.starty, redsquare.lengthy,red);
   Screen.drawRectangle(bluesquare.startx, bluesquare.lengthx, bluesquare.starty, bluesquare.lengthy,blue);
-  
 }
 
-void pressing(){
+int Alliance;
+//0 is Blue Alliance
+//1 is Red Alliance
+
+
+void rectCheck(void){
   int xPos = Brain.Screen.xPosition();
   int yPos = Brain.Screen.yPosition();
   if (xPos > redsquare.startx && xPos < redsquare.startx+redsquare.lengthx && yPos > redsquare.starty && yPos < redsquare.starty+redsquare.lengthy) {
-    Brain.Screen.clearScreen();
     Screen.drawRectangle(redsquare.startx, redsquare.lengthx, redsquare.starty, redsquare.lengthy, ClrGray);
+    Brain.Screen.clearScreen();
+    Alliance = 1;
   }
   if (xPos > bluesquare.startx && xPos < bluesquare.startx+bluesquare.lengthx && yPos > bluesquare.starty && yPos < bluesquare.starty+bluesquare.lengthy) {
-    Brain.Screen.clearScreen();
     Screen.drawRectangle(bluesquare.startx, bluesquare.lengthx, bluesquare.starty, bluesquare.lengthy, ClrGray);
+    Brain.Screen.clearScreen();
+    Alliance = 0;
   }
+}
+
+void rectCall(){
+  Brain.Screen.pressed(rectCheck);
+}
+
+void startUp(){
+  rectSize();
+  rectBuilder();
 }
