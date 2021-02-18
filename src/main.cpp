@@ -15,6 +15,9 @@
 #include "vex.h"
 #include "autonSelector.h"
 using namespace vex;
+void pre_auton(void){
+  
+}
 
 int main() {
   // Initializing Robot Configuration. DO NOT REMOVE!
