@@ -25,9 +25,9 @@ rectStruct blueSquare;
 rectStruct redSquare;
 
 void squares(){
-  Brain.Screen.setPenColor(black);
+  Brain.Screen.setPenColor(white);
   screen.drawRectangle(blueSquare.startx, blueSquare.starty, blueSquare.lengthx, blueSquare.lengthy, blue);
-  Brain.Screen.setPenColor(black);
+  Brain.Screen.setPenColor(white);
   screen.drawRectangle(redSquare.startx, redSquare.starty, redSquare.lengthx, redSquare.lengthy, red);
 }
 
@@ -51,5 +51,8 @@ void squareCheck(){
   if(xPos>redSquare.startx && xPos<redSquare.startx+redSquare.lengthx && yPos>redSquare.starty && yPos<redSquare.starty+redSquare.lengthy){
     Brain.Screen.clearScreen();
     screen.drawRectangle(redSquare.startx, redSquare.starty, redSquare.lengthx, redSquare.lengthy, red);
+  }
+  void rectCall(){
+    Brain.Screen.pressed
   }
 }
