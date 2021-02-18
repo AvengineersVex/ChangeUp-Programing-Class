@@ -32,7 +32,7 @@ void preAuton(void){
 
 
 void autonomous(void){
-  
+  autonSelect();
 }
 
 void usercontrol(void){

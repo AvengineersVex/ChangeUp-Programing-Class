@@ -62,3 +62,20 @@ void startUp(){
   rectSize();
   rectBuilder();
 }
+
+void autonSelect(){
+  if (Alliance) == 0 {
+    blueAuton();
+  }
+  if (Alliance) == 1 {
+    redAuton();
+  }
+}
+
+void blueAuton(){
+  task::sleep(3000);
+}
+
+void redAuton(){
+  task::sleep(3000);
+}
