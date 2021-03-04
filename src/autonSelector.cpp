@@ -37,6 +37,8 @@ void rectBuilder(){
 int Alliance;
 //0 is Blue Alliance
 //1 is Red Alliance
+int screenCounter;
+screenCounter = 0;
 
 
 void rectCheck(void){
@@ -46,11 +48,14 @@ void rectCheck(void){
     Screen.drawRectangle(redsquare.startx, redsquare.lengthx, redsquare.starty, redsquare.lengthy, ClrGray);
     Brain.Screen.clearScreen();
     Alliance = 1;
+    screenCounter + 1;
+
   }
-  if (xPos > bluesquare.startx && xPos < bluesquare.startx+bluesquare.lengthx && yPos > bluesquare.starty && yPos < bluesquare.starty+bluesquare.lengthy) {
+  else if (xPos > bluesquare.startx && xPos < bluesquare.startx+bluesquare.lengthx && yPos > bluesquare.starty && yPos < bluesquare.starty+bluesquare.lengthy) {
     Screen.drawRectangle(bluesquare.startx, bluesquare.lengthx, bluesquare.starty, bluesquare.lengthy, ClrGray);
     Brain.Screen.clearScreen();
     Alliance = 0;
+    screenCounter + 1; 
   }
 }
 
@@ -78,4 +83,8 @@ void blueAuton(){
 
 void redAuton(){
   task::sleep(3000);
+}
+
+void circBuilder(){
+  Brain.Screen.drawCircle(100,100,15);
 }
