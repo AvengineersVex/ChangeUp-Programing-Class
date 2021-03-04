@@ -81,3 +81,8 @@ void squareCheck(void) {
 void rectCall() { 
   Brain.Screen.pressed(squareCheck); 
   }
+
+
+void drawCircle(){
+  Brain.Screen.drawCircle(100,100,50); 
+  }
