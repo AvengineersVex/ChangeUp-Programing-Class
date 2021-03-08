@@ -20,14 +20,11 @@ BALL PLACEMENT
 #include "vex.h"
 #include "autonSelector.h"
 
-using namespace vex;
-
 competition Competition;
 
 void preAuton(void){
   vexcodeInit();
-  Brain.Screen.pressed(rectCheck);
-  startUp();
+  Brain.Screen.pressed();
 }
 
 
